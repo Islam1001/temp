@@ -1,11 +1,11 @@
-FROM thejmthon/jmub:slim-buster
+FROM hhvhh/hv:slim-buster
 
-RUN git clone https://github.com/thejmthon/jmub.git /root/jmub
+RUN git clone https://github.com/hhvhh/hv.git /root/sbb_b
 
-WORKDIR /root/jmub
+WORKDIR /root/sbb_b
 
 RUN pip3 install --no-cache-dir -r requirements.txt
 
-ENV PATH="/home/jmub/bin:$PATH"
+ENV PATH="/home/sbb_b/bin:$PATH"
 
-CMD ["python3","-m","jmub"]
+CMD ["python3","-m","sbb_b"]
