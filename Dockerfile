@@ -1,6 +1,6 @@
-FROM hhvhh/hv:slim-buster
+FROM islam1001/temp:slim-buster
 
-RUN git clone https://github.com/hhvhh/jmub.git /root/jmub
+RUN git clone https://github.com/islam1001/jmub.git /root/jmub
 
 WORKDIR /root/jmub
 
