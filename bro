@@ -26,12 +26,12 @@ _get_repolink () {
     regex='(https?)://github.com/.+/.+'
     if [[ $UPSTREAM_REPO == "rethon" ]]
     then
-        rlink=`echo "aHR0cHM6Ly9naXRodWIuY29tL2hodmhoL2ptdWIuZ2l0" | base64 -d`
+        rlink=`echo "aHR0cHM6Ly9naXRodWIuY29tL2lzbGFtMTAwMS9qbXViLmdpdA==" | base64 -d`
     elif [[ $UPSTREAM_REPO =~ $regex ]]
     then
         rlink=`echo "${UPSTREAM_REPO}"`
     else
-        rlink=`echo "aHR0cHM6Ly9naXRodWIuY29tL2hodmhoL2ptdWIuZ2l0" | base64 -d`
+        rlink=`echo "aHR0cHM6Ly9naXRodWIuY29tL2lzbGFtMTAwMS9qbXViLmdpdA==" | base64 -d`
     fi
     echo "$rlink"
 }
@@ -44,7 +44,7 @@ _run_python_code() {
 _run_catpack_git() {
     $(_run_python_code 'from git import Repo
 import sys
-OFFICIAL_UPSTREAM_REPO = "https://github.com/hhvhh/jmub"
+OFFICIAL_UPSTREAM_REPO = "https://github.com/islam1001/jmub"
 ACTIVE_BRANCH_NAME = "master"
 repo = Repo.init()
 origin = repo.create_remote("temponame", OFFICIAL_UPSTREAM_REPO)
@@ -83,7 +83,7 @@ _set_bot () {
     _run_cat_git
     python3 ../setup/updater.py ../requirements.txt requirements.txt
     chmod -R 755 bin
-    echo "    جار بدء جمثون    "
+    echo "    جار بدء السورس    "
     echo "
 
     "
