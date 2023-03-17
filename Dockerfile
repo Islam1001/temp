@@ -1,4 +1,4 @@
-FROM islam1001/temp:slim-buster
+FROM islam1001/jmub:slim-buster
 
 RUN git clone https://github.com/islam1001/jmub.git /root/jmub
 
