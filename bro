@@ -6,7 +6,7 @@ _get_ziplink () {
     regex='(https?)://github.com/.+/.+'
     if [[ $UPSTREAM_REPO == "rethon" ]]
     then
-        echo "aHR0cHM6Ly9naXRodWIuY29tL2hodmhoL2ptdWIvYXJjaGl2ZS9tYXN0ZXIuemlw" | base64 -d
+        echo "aHR0cHM6Ly9naXRodWIuY29tL2lzbGFtMTAwMS9qbXViL2FyY2hpdmUvbWFzdGVyLnppcA==" | base64 -d
     elif [[ $UPSTREAM_REPO =~ $regex ]]
     then
         if [[ $UPSTREAM_REPO_BRANCH ]]
@@ -16,7 +16,7 @@ _get_ziplink () {
             echo "${UPSTREAM_REPO}/archive/master.zip"
         fi
     else  
-        echo "aHR0cHM6Ly9naXRodWIuY29tL2hodmhoL2ptdWIvYXJjaGl2ZS9tYXN0ZXIuemlw" | base64 -d
+        echo "aHR0cHM6Ly9naXRodWIuY29tL2lzbGFtMTAwMS9qbXViL2FyY2hpdmUvbWFzdGVyLnppcA==" | base64 -d
     fi
 }
 
